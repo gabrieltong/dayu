@@ -1,0 +1,23 @@
+{
+  "name": "gabe/dayu",
+  "description": "include dayu sdk by composer way, save msg history in database",
+  "keywords": ["gabe", "dayu", "phone"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gabriel Tong",
+      "email": "334812134@qq.com"
+    }
+  ],
+  "require":{
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gabe\\Dayu\\": "src/"
+    },
+    "classmap": [
+      "migrations"
+    ]
+  }
+}
