@@ -15,9 +15,6 @@
   "autoload": {
     "psr-4": {
       "Gabe\\Dayu\\": "src/"
-    },
-    "classmap": [
-      "migrations"
-    ]
+    }
   }
 }

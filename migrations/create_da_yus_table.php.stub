@@ -20,7 +20,10 @@ class CreateDaYusTable extends Migration
             $table->string('recNum')->index();
             $table->string('smsTemplateCode')->index();
             $table->string('appkey')->index();
+            $table->integer('dayuable_id');
+            $table->string('dayuable_type');
             $table->timestamps();
+            $table->index(['dayuable_type','dayuable_id']);
         });
     }
 
