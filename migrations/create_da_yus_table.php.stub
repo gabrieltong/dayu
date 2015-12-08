@@ -12,7 +12,7 @@ class CreateDaYusTable extends Migration
      */
     public function up()
     {
-        Schema::create('da_yus', function (Blueprint $table) {
+        Schema::create('gabe_dayus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('smsType')->index();
             $table->string('smsFreeSignName')->index();
@@ -34,6 +34,6 @@ class CreateDaYusTable extends Migration
      */
     public function down()
     {
-        Schema::drop('da_yus');
+        Schema::drop('gabe_dayus');
     }
 }
