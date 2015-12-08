@@ -9,6 +9,8 @@ class DaYu extends Model
     private $ak = '';
     private $sk = '';
 
+    protected $table = 'gabe_dayus';
+
     public function config($ak,$sk)
     {
         $this->ak = $ak;
