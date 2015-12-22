@@ -44,7 +44,7 @@ class DaYu extends Model
 
     public function send()
     {
-        include __DIR__ . "/../../taobao-sdk-PHP-auto/TopSdk.php";
+        include_once __DIR__ . "/../../taobao-sdk-PHP-auto/TopSdk.php";
         date_default_timezone_set('Asia/Shanghai');
         $c = new \TopClient;
         $c->appkey = $this->ak;

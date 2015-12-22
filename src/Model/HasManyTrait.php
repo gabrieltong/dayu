@@ -5,6 +5,6 @@ trait HasManyTrait
 {
     public function dayus()
     {
-        return $this->morphMany('\Gabe\Dayu\Model\DaYu', 'dayuable');
+           return $this->morphMany('\Gabe\Dayu\Model\DaYu', 'dayuable');
     }
 }
