@@ -59,6 +59,13 @@ class DaYu extends Model
         $resp = $c->execute($req, $sessionKey);
         $json = json_encode($resp);
         $array = json_decode($json,TRUE);
-        var_dump($array);
+        if($result['result']['success'])
+        {
+            $this->send_at = new \DateTime('NOW');
+            $this->save();
+        }else{
+            $this->send_at = null;
+            $this->save();
+        }
     }
 }
