@@ -22,6 +22,7 @@ class CreateDaYusTable extends Migration
             $table->string('appkey')->index();
             $table->integer('dayuable_id');
             $table->string('dayuable_type');
+            $table->datetime('sended_at');
             $table->timestamps();
             $table->index(['dayuable_type','dayuable_id']);
         });
