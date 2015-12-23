@@ -58,14 +58,15 @@ class DaYu extends Model
         $req->setSmsTemplateCode($this->smsTemplateCode);
         $resp = $c->execute($req, $sessionKey);
         $json = json_encode($resp);
-        $array = json_decode($json,TRUE);
-        if($result['result']['success'])
+        $result = json_decode($json,TRUE);
+        if(isset($result['result']['success']))
         {
-            $this->send_at = new \DateTime('NOW');
+            $this->sended_at = new \DateTime('NOW');
             $this->save();
         }else{
-            $this->send_at = null;
+            $this->sended_at = null;
             $this->save();
         }
+        return $result;
     }
 }
