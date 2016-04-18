@@ -14,15 +14,17 @@ class CreateDaYusTable extends Migration
     {
         Schema::create('gabe_dayus', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('smsType')->index();
-            $table->string('smsFreeSignName')->index();
-            $table->string('smsParam')->index();
-            $table->string('recNum')->index();
-            $table->string('smsTemplateCode')->index();
+            $table->string('smsType')->index()->default('');
+            $table->string('smsFreeSignName')->index()->default('');
+            $table->string('smsParam')->default('');
+            $table->string('recNum')->index()->default('');
+            $table->string('smsTemplateCode')->index()->default('');
             $table->string('appkey')->index();
-            $table->integer('dayuable_id');
-            $table->string('dayuable_type');
+            $table->integer('dayuable_id')->index();
+            $table->string('dayuable_type')->index();
             $table->datetime('sended_at');
+            $table->string('result');
+            $table->boolean('sended')->index()->default(0);
             $table->timestamps();
             $table->index(['dayuable_type','dayuable_id']);
         });
